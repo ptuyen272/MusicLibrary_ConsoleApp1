@@ -1,4 +1,4 @@
-Double-click MusicLibrary_ConsoleApp.exe to open application
+Double-click MusicLibrary_ConsoleApp1.exe to open application
 
 1. Add new track: add new track to library
 2. See all track: 
