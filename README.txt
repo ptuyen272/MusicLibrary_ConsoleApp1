@@ -1,4 +1,4 @@
-Double-click MusicLibrary_ConsoleApp1.exe to open application
+
 - Create folder to store code
 - Open Microsoft Visual Studio
 - Select "Clone a repository"
