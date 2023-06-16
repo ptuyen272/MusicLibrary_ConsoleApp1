@@ -18,6 +18,8 @@ namespace MusicLibrary_ConsoleApp1
         dynamic duration;
         static void Main(string[] args)
         {
+
+            //main menu
             var key = "";
             var program = new Program();
             do
@@ -36,26 +38,31 @@ namespace MusicLibrary_ConsoleApp1
                 bool canConverted = int.TryParse(keyMenu, out menu);
                 if (keyMenu != null && canConverted)
                 {
+                    //add new track
                     if (menu == 1)
                     {
                         program.AddTrack();
                         
                     }
+                    //see all track in library
                     if (menu == 2)
                     {
                         program.FindAllTrack();
                         
                     }
+                    //create new playlist
                     if (menu == 3)
                     {
                         program.AddPlaylist();
                         
                     }
+                    //see list of all playlist in library
                     if (menu == 4)
                     {
                         program.FindAllPlaylist();
                         
                     }
+                    //search track or playlist by keyword
                     if (menu == 5)
                     {
                         program.SearchMenu();
@@ -99,7 +106,7 @@ namespace MusicLibrary_ConsoleApp1
 
             });
 
-            //search track in list by their Title or Genre 
+            //search and print track in list by their Title or Genre 
             Console.WriteLine();
             Console.Write("Search by Title or Genre: ");
             string keyword = Console.ReadLine();
@@ -115,11 +122,12 @@ namespace MusicLibrary_ConsoleApp1
                 });
             }
 
-            // select track and action menu
+            // select track and action menu for track
             var key = "";
             do
             {
                 Console.WriteLine();
+                //select track by id
                 Console.Write("Type track number to see track detail: ");
                 var input = Console.ReadLine();
                 int trackId = 0;
@@ -127,6 +135,7 @@ namespace MusicLibrary_ConsoleApp1
                 if (input != null && canConverted)
                 {
                     Console.WriteLine();
+                    //show details of selected track and action menu for track
                     SeeTrackDetails(trackId);
                 }
                 Console.Write("Press y to see other track details ");
@@ -157,20 +166,24 @@ namespace MusicLibrary_ConsoleApp1
                 bool canConverted = int.TryParse(keyMenu, out menu);
                 if (keyMenu != null && canConverted)
                 {
+                    //update track info
                     if (menu == 1)
                     {
                         UpdateTrackInfo(track);
                     }
+                    //delete track from library
                     if (menu == 2)
                     {
                         DeleteTrack(track);
                     }
+                    //play song
                     if (menu == 3)
                     {
                         PlaySong(track);
                         Console.ReadKey();
                         Stop();
                     }
+                    // selected playlist to add track
                     if (menu == 4)
                     {
                         AddTrackToPlaylist(track);

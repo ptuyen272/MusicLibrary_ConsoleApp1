@@ -1,5 +1,13 @@
-Double-click MusicLibrary_ConsoleApp.exe to open application
+- Create folder to store code
+- Open Microsoft Visual Studio
+- Select "Clone a repository"
+- Put link to Repository location: https://github.com/ptuyen272/MusicLibrary_ConsoleApp1.git
+- Browse to folder to store code
+- Clone
+- Select project "MusicLibrary_ConsoleApp1"
+- Click "Start" to run application
 
+Appication function:
 1. Add new track: add new track to library
 2. See all track: 
 	- see number of tracks in library
